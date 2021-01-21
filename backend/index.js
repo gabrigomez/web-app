@@ -1,7 +1,7 @@
 const app = require('express')()
 const consign = require('consign')
-const db = require('./config/database')
 
+const db = require('./config/db')
 app.db = db
 
 consign()
@@ -11,6 +11,7 @@ consign()
     .then('./config/routes.js')
     .into(app)
 
+    
 app.listen(3000, () => {
-    console.log('Backend executando...')
+    console.log('Backend on...')
 })
