@@ -31,7 +31,7 @@ module.exports = app => {
                 notExistsOrError(userDb, 'Usuário já cadastrado')
             } 
         } catch (msg) {
-            return res.status(404).send(msg)
+            return res.status(400).send(msg)
         }
 
         //encriptografa password
@@ -49,7 +49,7 @@ module.exports = app => {
             app.db('users')
                 .insert(user)
                 .then(_ => res.status(204).send())
-                .catch(err => res.sendStatus(500).send(err))
+                .catch(err => res.status(500).send(err))
 
         }
 
@@ -60,9 +60,7 @@ module.exports = app => {
             .select('id', 'name', 'email')
             .whereNull('deletedAt')
             .then(user => res.json(user))
-            .catch(err => res.status(500).send(err))
-
-        
+            .catch(err => res.status(500).send(err))        
     }
 
     return { save, get }
