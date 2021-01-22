@@ -35,5 +35,19 @@ export default {
 </script>
 
 <style>
+    .text {
+        display: flex;
+        
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
+        
+
+    }
+
+    input {
+        margin: 12px;
+    }
 </style>

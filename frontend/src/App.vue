@@ -1,25 +1,38 @@
 <template>
   <div id="app">
-    <Authentication />
+    <Header />
+    <Content />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Authentication from '@/auth/Authentication'
+import Header from "@/components/templates/Header";
+import Content from "@/components/templates/Content";
+import Footer from "@/components/templates/Footer";
 
 export default {
-  name: 'App',
-  components: { Authentication }
-}
+  name: "App",
+  components: { Header, Content, Footer },
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    * {
+      font-family: monospace;
+    }
+    
+    #app {
+      height: 100vh;
+
+      display: grid;
+
+      grid-template-rows: 100px 1fr 50px;
+      grid-template-columns: 200px 1fr;
+
+      grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+    }
 </style>
