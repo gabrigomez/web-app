@@ -1,6 +1,7 @@
 <template>
     <header>
-        <h1> Cadastro de usuários </h1>
+        <h1> ContactList 1.0 </h1>
+        <h5> cadastro de usuários</h5>
     </header>
 </template>
 
@@ -19,6 +20,13 @@ export default {
         justify-content: center;
         flex-direction: column;
         
+    }
+    h1 {
+         margin-bottom: 0px;
+    }
+
+    h5 {
+        margin-top: 5px;
     }
     
 </style>
