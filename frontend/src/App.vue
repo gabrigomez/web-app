@@ -3,6 +3,7 @@
     <Header />
     <Content />
     <Footer />
+    
   </div>
 </template>
 
@@ -11,9 +12,10 @@ import Header from "@/components/templates/Header";
 import Content from "@/components/templates/Content";
 import Footer from "@/components/templates/Footer";
 
+
 export default {
   name: "App",
-  components: { Header, Content, Footer },
+  components: { Header, Content, Footer},
 };
 </script>
 
